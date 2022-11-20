@@ -99,7 +99,7 @@ const Header = () => {
           </li>
           <li>
             <Link to={"/login"} className="nav-menu-list">
-              로그인
+              로그인/회원가입
             </Link>
           </li>
         </NavManu>
