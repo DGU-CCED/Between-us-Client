@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import {Button} from "reactstrap";
-import {FaBars} from "react-icons/fa";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { Button } from 'reactstrap';
+import { FaBars } from 'react-icons/fa';
+import React from 'react';
 
 const StyledHeader = styled.header`
   background-color: #1e1e1e;
@@ -23,7 +24,7 @@ const StyledHeader = styled.header`
   .menuToggleBtn {
     display: none;
     color: white;
-    font-size: 24px;
+    font-size: 12px;
     position: absolute;
     right: 20px;
     top: 15px;
@@ -55,10 +56,10 @@ const NavManu = styled.ul`
     color: white;
     display: block;
     padding: 10px 10px;
-    font-size: 30px;
+    font-size: 15px;
   }
   @media screen and (max-width: 768px) {
-    display: ${(props) => (props.isToggleOpen ? "block" : "none")};
+    display: ${(props) => (props.isToggleOpen ? 'block' : 'none')};
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -76,34 +77,40 @@ const Header = () => {
     <>
       <StyledHeader>
         <div className="nav_logo">
-          <Link to={"/"} className="nav-logo-link">
+          <Link to={'/'} className="nav-logo-link">
             Our42
           </Link>
         </div>
 
         <NavManu isToggleOpen={isToggleOpen}>
           <li>
-            <Link to={"/management"} className="nav-menu-list">
+            <Link to={'/management'} className="nav-menu-list">
               대회관리
             </Link>
           </li>
           <li>
-            <Link to={"/home"} className="nav-menu-list">
+            <Link to={'/home'} className="nav-menu-list">
               우리 사이
             </Link>
           </li>
           <li>
-            <Link to={"/mypage"} className="nav-menu-list">
+            <Link to={'/mypage'} className="nav-menu-list">
               마이페이지
             </Link>
           </li>
           <li>
-            <Link to={"/login"} className="nav-menu-list">
+            <Link to={'/login'} className="nav-menu-list">
               로그인/회원가입
             </Link>
           </li>
         </NavManu>
-        <FaBars buttonStyle='btn--outline' className="menuToggleBtn" onClick={handleToggleOpen}>Menu</FaBars>
+        <FaBars
+          buttonStyle="btn--outline"
+          className="menuToggleBtn"
+          onClick={handleToggleOpen}
+        >
+          Menu
+        </FaBars>
       </StyledHeader>
     </>
   );
