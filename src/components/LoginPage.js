@@ -15,12 +15,12 @@ function LoginPage() {
     setPassword(event.currentTarget.value)
   }
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-  }
-
   const onClickButton = () => {
     navigate('/register');
+  }
+
+  const onClickHome = () => {
+    navigate('/home');
   }
 
   return (
@@ -29,8 +29,8 @@ function LoginPage() {
             <div class="title"><h2>로그인</h2></div>
             <div><input name="email" type="email" placeholder="이메일" value={email} onChange={onEmailHandler} class="loginregister__input"/></div>
             <div><input name="password" type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} class="loginregister__input"/></div>
-            <div><button type="submit" onSubmit={onSubmit} class="loginregister__button">로그인</button></div>
             <div><button onClick={onClickButton} class="moveRegister">회원가입 이동</button></div>
+            <div><button onClick={onClickHome} class="loginregister__button">로그인</button></div>
         </form>
       </div>
     );
