@@ -34,7 +34,7 @@ const TabList = () => {
     ];
     
     // 각 Tab의 넓이 지정
-    var minWidth = Math.floor(document.body.clientWidth / tabList.length);
+    var minWidth = Math.floor(100 / tabList.length);
     return(
         <div className="tabBox">
             <ul className="tabList" role="tablist">
