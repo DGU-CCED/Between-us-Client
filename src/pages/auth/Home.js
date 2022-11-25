@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import ListView from '../../components/ListView';
 import TabList from '../../components/TabList';
+import HackathonList from '../../components/HackathonList';
 import "./Home.css"
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
         <div class="home-container">
             <div class="home_select">
                 <TabList />
-                <ListView />
+                <HackathonList />
             </div>
             
             <div class="test">Hi</div>
