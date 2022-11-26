@@ -25,10 +25,6 @@ function RegisterPage() {
       setPassword(event.currentTarget.value);
   }
 
-  const onConfirmPasswordHandler = (event) => {
-      setConfirmPassword(event.currentTarget.value);
-  }
-
   const onDescriptionHandler = (event) => {
     setDescription(event.currentTarget.value);
   }
@@ -62,7 +58,6 @@ function RegisterPage() {
           <div><input name="name" type="text" placeholder="이름" value={name} onChange={onNameHandler} className="loginregister__input"/></div>
           <div><input name="email" type="text" placeholder="ID" value={id} onChange={onIdHandler} className="loginregister__input"/></div>
           <div><input name="password" type="password" placeholder="비밀번호" value={password} onChange={onPasswordHandler} className="loginregister__input"/></div>
-          <div><input name="confirmPassword" type="password" placeholder="비밀번호 확인" value={confirmPassword} onChange={onConfirmPasswordHandler} className="loginregister__input"/></div>
           <div><textarea rows={1} name="description" type="textarea" wrap="on" placeholder="자기소개" value={description} onChange={onDescriptionHandler} className="loginregister__desc"/></div>
           <div><input name="institution" type="text" placeholder="학교" value={institution} onChange={onInstitutionHandler} className="loginregister__input"/></div>
           <div><input name="major" type="text" placeholder="학과" value={major} onChange={onMajorHandler} className="loginregister__input"/></div>
