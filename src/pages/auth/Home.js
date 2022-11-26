@@ -13,7 +13,7 @@ function Home() {
                 <HackathonList />
             </div>
             
-            <div class="test">Hi</div>
+            <div class="test">홈화면 종료</div>
         </div>
     );
 }
