@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import { Route, Link, useNavigate } from 'react-router-dom';
+import { Card } from 'reactstrap';
 
 const Styled = styled.div`
     color: white;
@@ -21,13 +22,15 @@ const HackathonList = () =>{
     ]);
     const navigate = useNavigate();
 
-    const hackathonList = posts.map((post) => 
-        <li key={post.id} className="hackathonList">
-            <p>{post.title}</p>
-            <p>{post.date}</p>
-            <Link to={'/login'} className="linkStyle" style={{textDecoration: 'none', color: 'white'}} >이동 테스트...(클릭)</Link>
-        </li>
-    )
+    const hackathonList = posts.map((post) => {
+        return(
+            <li key={post.id} className="hackathonList">
+                <p>{post.title}</p>
+                <p>{post.date}</p>
+                <Link to={'/hackathon/detail/'+post.id} className="linkStyle" style={{textDecoration: 'none', color: 'white'}} >이동 테스트...(클릭)</Link>
+            </li>
+        );
+    });
 
     return (
         <>
