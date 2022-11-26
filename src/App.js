@@ -6,6 +6,7 @@ import Header from './components/header/Header.js';
 import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import Home from './pages/auth/Home';
+import HackathonDetail from './components/HackathonDetail';
 
 class App extends Component{
   render(){
@@ -15,6 +16,7 @@ class App extends Component{
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route exact path='/home' element={<Home/>}/>
+          <Route exact path="/hackathon/detail/:id" element={<HackathonDetail/>}/>
           <Route path='/login' element={<LoginPage />}/>
           <Route path='/register' element={<RegisterPage />}/>
         </Routes>       
