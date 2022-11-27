@@ -20,6 +20,7 @@ class App extends Component {
           <Route exact path="/hackathon/detail/:id" element={<HackathonDetail />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
+          <Route path='/kanban' element={<Kanban />} />
         </Routes>
       </div>
     );
