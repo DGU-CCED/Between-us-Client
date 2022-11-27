@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 import dummy from '../data/dummy.json';
+import ImageSlider from './ImageSlider';
 import './HackathonList.css';
 import Posts from './Posts';
 import Pagination from './Pagination';
@@ -59,6 +60,7 @@ const HackathonList = () =>{
 
     const navigate = useNavigate();
     const [pageNum, setPageNum] = useState(1);
+    const [images, setImages] = useState([]);
     
     let currentPageHackathon = dummy.data.filter(v => v.id>=(pageNum-1)*3+1 && v.id<=(pageNum*3));
 
@@ -96,13 +98,14 @@ const HackathonList = () =>{
     //     );
     // });
 
+    
+
     const dummyHackathon = currentPageHackathon.map((item, index) => {
         return(
             <>
             <div className='hackathonBox'>
                 <li key={index} className="hackathonList">
-                    <img src="../.././assets/bubbleson.jpeg" alt="에러" style={{maxWidth: '100%'}}/>
-                    <img src={item.hackathon_image} alt="에러" style={{maxWidth: '100%'}}/>
+                    <ImageSlider images={item.hackathon_image}/>
                     <p>{item.name}</p>
                     <p>{item.start_date} ~ {item.end_date}</p>
                     <p>{item.content}</p>
