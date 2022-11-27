@@ -89,7 +89,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to={'/home'} className="nav-menu-list">
+            <Link to={'/hackathon/list'} className="nav-menu-list">
               우리 사이
             </Link>
           </li>
