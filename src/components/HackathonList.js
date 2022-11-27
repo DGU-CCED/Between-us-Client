@@ -102,6 +102,7 @@ const HackathonList = () =>{
             <div className='hackathonBox'>
                 <li key={index} className="hackathonList">
                     <img src="../.././assets/bubbleson.jpeg" alt="에러" style={{maxWidth: '100%'}}/>
+                    <img src={item.hackathon_image} alt="에러" style={{maxWidth: '100%'}}/>
                     <p>{item.name}</p>
                     <p>{item.start_date} ~ {item.end_date}</p>
                     <p>{item.content}</p>
