@@ -15,12 +15,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route exact path='/home' element={<Home />} />
+          <Route path='/hackathon/list/1' element={<Home />} />
+          <Route exact path='/hackathon/list' element={<Home />} />
           <Route exact path="/hackathon/detail/:id" element={<HackathonDetail />} />
           <Route path='/login' element={<LoginPage />} />
           <Route path='/register' element={<RegisterPage />} />
-          <Route path='/kanban' element={<Kanban />} />
         </Routes>
       </div>
     );

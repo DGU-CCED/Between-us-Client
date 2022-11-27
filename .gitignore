@@ -21,3 +21,6 @@ yarn-error.log*
 
 # user
 src/test
+
+package.json
+package-lock.json
