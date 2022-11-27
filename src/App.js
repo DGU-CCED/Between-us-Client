@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Route, Routes} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Header from './components/header/Header.js';
@@ -14,8 +14,8 @@ class App extends Component{
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route exact path='/home' element={<Home/>}/>
+          <Route path='/hackathon/list/1' element={<Home/>}/>
+          <Route exact path='/hackathon/list' element={<Home/>}/>
           <Route exact path="/hackathon/detail/:id" element={<HackathonDetail/>}/>
           <Route path='/login' element={<LoginPage />}/>
           <Route path='/register' element={<RegisterPage />}/>
